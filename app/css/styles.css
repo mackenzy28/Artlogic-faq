@@ -106,10 +106,7 @@ body {
       padding: 0;
       border-top: 1px solid #d7d7d7; }
     body .faq__list-item {
-      cursor: pointer;
       display: block;
-      padding: 25px 0 25px 18px;
-      list-style-position: inside;
       border-bottom: 1px solid #d7d7d7; }
       body .faq__list-item--show .faq__content-wrapper {
         display: block;
@@ -119,14 +116,15 @@ body {
       body .faq__list-item--show .faq__title::after {
         transform: rotate(180deg); }
     body .faq__title {
+      cursor: pointer;
       display: list-item;
-      list-style-position: outside;
+      list-style-position: inside;
       position: relative;
       margin: 0;
       color: #111;
       font-size: 16px;
       font-weight: bold;
-      padding-right: 15%; }
+      padding: 25px 15% 25px 0px; }
       body .faq__title::after {
         content: '';
         background-image: url("../images/arrow-drop-down.svg");
@@ -142,7 +140,6 @@ body {
         transition: transform 0.3s ease;
         -webkit-transition: transform 0.3s ease; }
     body .faq__content-wrapper {
-      margin-left: -18px;
       width: 90%;
       display: block;
       overflow: hidden;

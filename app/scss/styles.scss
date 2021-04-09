@@ -142,10 +142,7 @@ body {
         }
 
         &__list-item {
-            cursor: pointer;
             display: block;
-            padding: 25px 0 25px 18px;
-            list-style-position: inside;
             border-bottom: 1px solid #d7d7d7;
             
             &--show {
@@ -165,14 +162,15 @@ body {
         }
 
         &__title {
+            cursor: pointer;
             display: list-item;
-            list-style-position: outside;
+            list-style-position: inside;
             position: relative;
             margin: 0;
             color: #111;
             font-size: 16px;
             font-weight: bold;
-            padding-right: 15%;
+            padding: 25px 15% 25px 0px;
 
             &::after {
                 content:'';
@@ -192,7 +190,6 @@ body {
         }
 
         &__content-wrapper {
-            margin-left: -18px;
             width: 90%;
             display: block;
             overflow: hidden;

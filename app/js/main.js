@@ -7,8 +7,8 @@ const renderFaq = (data) => {
     const array = data.rows;
     for (let i in array) {
         const html = `
-        <li class="faq__list-item faq__list-item--collapsed" data-action="collapse">
-            <h4 class="faq__title">${array[i].title}</h4>
+        <li class="faq__list-item faq__list-item--collapsed">
+            <h4 class="faq__title" data-action="collapse">${array[i].title}</h4>
             <div class="faq__content-wrapper">
                 <p class="faq__content">${array[i].content}</p>
             </div>
@@ -22,10 +22,10 @@ const renderFaq = (data) => {
             console.log('click');
 
             const openItem = document.querySelector('.faq__list-item--show');
-            if (openItem != null && openItem != this) { 
+            if (openItem != null && openItem != this.parentElement) { 
                 openItem.classList.toggle('faq__list-item--show');
             }
-            this.classList.toggle('faq__list-item--show');
+            this.parentElement.classList.toggle('faq__list-item--show');
         });
     }
 }
